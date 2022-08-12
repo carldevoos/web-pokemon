@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon API</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js">
+        /* function pokemonDetail(url) {
+            var image = document.getElementById("pokemon-image")
+            var pokemonName = document.getElementById("pokemon-name")
+            fetch(url)
+                .then(resp => resp.json())
+                .then(function (data) {
+                    //image.src=data.sprites.other.home.front_default
+                    image.src = data.sprites.other["official-artwork"].front_default
+                    pokemonName.innerHTML = `<h3>${data.name}</h3>`.toLocaleUpperCase()
+                    //console.log(data.sprites.other["official-artwork"].front_default)
+                })
+        } */
+    </script>
+</head>
+
+<body>
+    <div class="titulo"><h1>Carlos Pokedex</h1></div>
+    <div class="contenedor">
+        <div id="list-pokemon" class="contenido">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Pokemon</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div id="detail-pokemon" class="contenido">
+            <div class="image"><img id="pokemon-image" src="" alt=""></div>
+            <div id="pokemon-name" class="title-center">
+                <h3>Detalles del Pokemon</h3>
+            </div>
+            <table id="table-ability">
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
